@@ -68,18 +68,25 @@
           white-space: nowrap; 
       }
 
-      .nav-links { display: flex; gap: 1.5rem; }
-      .nav-links a {
-          text-decoration: none; color: var(--text-muted);
-          font-size: 11px; font-weight: 600; text-transform: uppercase;
-          letter-spacing: 1px; transition: var(--transition);
-      }
-      .nav-links a:hover { color: var(--primary); }
-
+      
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-muted);
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1.5px; transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a:hover { color: white; }
+        .nav-links a::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -5px; left: 0; background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
       .mobile-toggle { display: none; background: none; border: none; color: white; cursor: pointer; }
 
       .btn-contact {
-          background: var(--primary); color: #000;
+          background: var(--primary); color: #222222;
           padding: 0.6rem 1.2rem; border-radius: 50px;
           font-weight: 700; text-decoration: none; font-size: 0.8rem;
           transition: var(--transition);
@@ -89,7 +96,7 @@
       .hero { padding: 12rem 0 6rem 0; text-align: center; }
       .hero h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
       .gradient-text { background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      .linear-gradient { background: linear-gradient(200deg, #ffffff 20%, var(--accent-red) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+      .linear-gradient { background: linear-gradient(300deg, #ffffff 20%, red 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
       .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem; }
       .hero-btns { display: flex; justify-content: center; gap: 1rem; }
 
@@ -125,7 +132,7 @@
       }
       .glass-card:hover { transform: translateY(-8px); border-color: var(--accent-red); background: rgba(255, 64, 64, 0.05); }
       .glass-card i { color: var(--primary); margin-bottom: 1rem; display: block; }
-      .badge { font-size: 10px; background: rgba(255, 64, 64, 0.308); color: var(--accent-red); padding: 4px 8px; border-radius: 4px; font-weight: 700; }
+      .badge { font-size: 10px; background: rgba(250, 32, 32, 0.308); color: var(--primary); padding: 4px 8px; border-radius: 4px; font-weight: 700; }
 
       /* --- COMPLETE FOOTER STYLES --- */
       footer { padding: 6rem 0 3rem; border-top: 1px solid var(--border-color); background: rgba(0,0,0,0.4); }
@@ -209,7 +216,7 @@
 
     <section id="home" class="hero container">
       <h1>
-        <span class="linear-gradient">Intelli</span><span>gence</span>
+        <span class="linear-gradient">Intelligence</span>
         <br /><span class="gradient-text">Redefined.</span>
       </h1>
       <p class="reveal">VATE Software Systems bridges the gap between workforce potential and the AI revolution.</p>
@@ -240,13 +247,14 @@
         </div>
       </div>
     </section>
-
+<br>
+<br>
     <section class="container" style="padding-bottom: 8rem;">
     <div class="section-title reveal">
-        <h2 style="color: rgba(255, 0, 0, 0.7);" ><span style="color:var(--primary)">Core</span> Solutions</h2>
+        <h2 style="color:var(--accent-red);" ><span style="color:var(--primary)">Core</span> Solutions</h2>
         <div class="underline"></div>
     </div>
-
+<br>
     <div class="grid-layout">
         <div class="glass-card spotlight-card reveal">
             <i data-lucide="home" size="36"></i>
